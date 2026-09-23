@@ -2,8 +2,6 @@
 
 An interactive, high-performance web application that visualizes core sorting algorithms in real time. Built with React and Vite, the platform features dynamic step-by-step state animations, live execution counters, and responsive viewport-restricted scaling.
 
-![Visual Sorting Screenshot](src/assets/hero.png)
-
 ## Live Demo
 
 🔗 **[Live Application](https://sorting-visualizer-nu-teal.vercel.app/)**
