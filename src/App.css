@@ -1,10 +1,13 @@
 .app-container {
   max-width: 1200px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: 12px 16px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .header-bar {
@@ -12,11 +15,12 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #1e293b;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #f8fafc;
   margin: 0;
@@ -24,8 +28,8 @@
 
 .metrics-group {
   display: flex;
-  gap: 24px;
-  font-size: 0.875rem;
+  gap: 20px;
+  font-size: 0.85rem;
   font-family: monospace;
   color: #94a3b8;
 }
@@ -35,12 +39,15 @@
   font-weight: 600;
 }
 
+/* Flex-grow allows visualizer card to auto-scale dynamically */
 .visualizer-card {
   background-color: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
-  height: 380px;
-  padding: 20px 20px 10px 20px;
+  flex: 1;
+  min-height: 200px;
+  margin: 12px 0;
+  padding: 16px 16px 8px 16px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -58,7 +65,8 @@
 .controls-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -71,23 +79,23 @@
   background-color: #1e293b;
   border: 1px solid #334155;
   border-radius: 12px;
-  padding: 16px;
+  padding: 12px;
 }
 
 .algo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 6px;
 }
 
 .btn-algo {
   background-color: #0f172a;
   border: 1px solid #334155;
   color: #cbd5e1;
-  padding: 10px 12px;
+  padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-align: left;
   transition: all 0.15s ease;
 }
@@ -106,9 +114,9 @@
 
 .action-row {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .btn-primary {
@@ -116,10 +124,10 @@
   color: #052e16;
   border: none;
   font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 8px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.875rem;
   transition: background-color 0.15s ease;
 }
 
@@ -132,10 +140,10 @@
   color: #f8fafc;
   border: none;
   font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .btn-secondary:hover {
@@ -145,19 +153,19 @@
 .slider-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .slider-control {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .slider-label {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #94a3b8;
 }
 

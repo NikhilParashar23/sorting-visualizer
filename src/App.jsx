@@ -43,7 +43,7 @@ export default function App() {
     stopSorting();
     const newArr = [];
     for (let i = 0; i < arraySize; i++) {
-      newArr.push(Math.floor(Math.random() * 280) + 20);
+      newArr.push(Math.floor(Math.random() * 95) + 5);
     }
     setArray(newArr);
     setComparing([]);
@@ -260,12 +260,10 @@ export default function App() {
         return 0;
       };
 
-      // Build heap
       for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
         if ((await heapify(n, i)) === -1) return;
       }
 
-      // Extract elements from heap
       for (let i = n - 1; i > 0; i--) {
         [arr[0], arr[i]] = [arr[i], arr[0]];
         setArray([...arr]);
@@ -293,9 +291,6 @@ export default function App() {
           <div className="metric-item">
             SWP <span>{swaps}</span>
           </div>
-          <div className="metric-item">
-            ACC <span>0</span>
-          </div>
         </div>
       </div>
 
@@ -316,7 +311,7 @@ export default function App() {
               key={idx}
               className="array-bar"
               style={{
-                height: `${value}px`,
+                height: `${value}%`,
                 backgroundColor: bgColor
               }}
             />
