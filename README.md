@@ -1,16 +1,57 @@
-# React + Vite
+# Visual Sorting
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive, high-performance web application that visualizes core sorting algorithms in real time. Built with React and Vite, the platform features dynamic step-by-step state animations, live execution counters, and responsive viewport-restricted scaling.
 
-Currently, two official plugins are available:
+![Visual Sorting Screenshot](src/assets/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+🔗 **[Live Application](https://sorting-visualizer-nu-teal.vercel.app/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **6 Core Algorithms**:
+  - Bubble Sort
+  - Selection Sort
+  - Insertion Sort
+  - Quick Sort
+  - Merge Sort
+  - Heap Sort
+- **Real-Time Execution Metrics**: Tracks comparison counts (`CMP`) and swap operations (`SWP`) dynamically during execution.
+- **Interactive Control Panel**:
+  - **Start / Pause / Resume**: Full step execution flow control.
+  - **Dynamic Array Controls**: Real-time slider adjustments for array size (15–180 elements).
+  - **Speed Controls**: Adjustable delay range (1ms–100ms) for high-speed comparisons or granular step-by-step observation.
+  - **Shuffle**: Instantly generates randomized dataset states.
+- **Responsive Viewport Design**: Fully constrained `100vh` flexbox engine eliminating window scrollbars across display aspect ratios.
+- **Color-Coded State Visuals**:
+  - 🟨 **Yellow**: Active Comparison
+  - 🟥 **Red**: Swap / Overwrite Operation
+  - 🟩 **Green**: Sorted Index Position
+  - 🟦 **Sky Blue**: Unsorted Base State
+
+---
+
+## Tech Stack
+
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: Modern CSS3 (Flexbox, Grid, Dynamic Viewport Units)
+- **Deployment**: Vercel
+
+---
+
+## Local Setup & Development
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) (v18 or higher) installed.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone [https://github.com/NikhilParashar23/sorting-visualizer.git](https://github.com/NikhilParashar23/sorting-visualizer.git)
+   cd sorting-visualizer
